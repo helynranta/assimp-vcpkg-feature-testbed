@@ -1,0 +1,16 @@
+{
+  "default-registry":
+  {
+    "kind": "git",
+    "repository": "https://github.com/microsoft/vcpkg",
+    "baseline": "33f02c0ae50c262da487d21ace4f5d67ae949c18"
+  },
+  "registries": [
+    {
+      "kind": "git",
+      "repository": "https://github.com/lerppana/vcpkg",
+      "packages": [ "assimp" ],
+      "baseline": "89f7510a4c0431b03a4012ec7011986b0b1dd150"
+    }
+  ]
+}
