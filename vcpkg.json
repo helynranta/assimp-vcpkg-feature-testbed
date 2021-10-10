@@ -1,0 +1,4 @@
+{
+ "name":"assimp-build-test",
+ "dependencies":["assimp"]
+}
