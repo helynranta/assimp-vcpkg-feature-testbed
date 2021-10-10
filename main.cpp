@@ -1,6 +1,8 @@
-#include <iostream>
+#include <assimp/Importer.hpp>
 
 int main (int args, const char** argv)
 {
-    return EXIT_SUCCESS;
+    Assimp::Importer importer;
+
+    return 0;
 }
