@@ -9,8 +9,8 @@
     {
       "kind": "git",
       "repository": "https://github.com/lerppana/vcpkg",
-      "packages": [ ],
-      "baseline": "89f7510a4c0431b03a4012ec7011986b0b1dd150"
+      "packages": [ "assimp" ],
+      "baseline": "973a7d517c09c8cfb7e6a548fcc260ca34ba7b60"
     }
   ]
 }
