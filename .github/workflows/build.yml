@@ -28,19 +28,28 @@ jobs:
       VCPKG_ROOT: ${{ github.workspace }}/vcpkg
     steps:
       - uses: actions/checkout@v2
+        name: checkout repository
 
       - uses: actions/checkout@v2
         with:
           repository: 'microsoft/vcpkg'
           path: ${{ github.workspace }}/vcpkg
+        name: fetch vcpkg
 
       # Install latest CMake.
       - uses: lukka/get-cmake@latest
+        name: install cmake
 
       - run: ${{ github.workspace }}/vcpkg/bootstrap-vcpkg.sh
         if: matrix.os != 'windows-latest'
+        name: bootstrap vcpkg shell script
 
       - run: ${{ github.workspace }}/vcpkg/bootstrap-vcpkg.bat
         if: matrix.os == 'windows-latest'
+        name: bootstrap vcpkg batch script
 
       - run: cmake ${{ github.workspace }} -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
+        name: cmake configure
+
+      - run: cmake --build .
+        name: cmake build
