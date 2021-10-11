@@ -48,7 +48,7 @@ jobs:
         if: matrix.os == 'windows-latest'
         name: bootstrap vcpkg batch script
 
-      - run: cmake ${{ github.workspace }} -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
+      - run: cmake ${{ github.workspace }} -G Ninja -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
         name: cmake configure
 
       - run: cmake --build .
