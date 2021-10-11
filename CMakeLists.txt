@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(assimp-vcpkg-feature-testbed)
+project(assimp-vcpkg-feature-testbed CXX)
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
 
