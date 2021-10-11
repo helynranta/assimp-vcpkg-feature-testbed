@@ -2,10 +2,9 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 
 vcpkg_from_github(
         OUT_SOURCE_PATH SOURCE_PATH
-        REPO lerppana/openddl-parser
-        REF f3fc5825ea41edf0dfb4fc016ee6e507ba7a7850
-        SHA512 61d4f413ef0ef221ecc2d9fa9505c9a276a9495789a76f325c3db08ac7587423c8b54e10829e7a8c5c808f6a815edfb92d24596da483a9eed95a191a64e2562d
-        HEAD_REF install-target
+        REPO kimkulling/openddl-parser
+        REF 1131ef29f0ff60325181733904583cbb6f25dbfd
+        SHA512 e146f9b7e5d26f633e269c765de0489027cdabf13466cbab4601e3d24f682c3d3774113fa98e118f86a3cf343c9ecabbcb6541abbd001f4c0d7775114418da6e
 )
 
 vcpkg_configure_cmake(

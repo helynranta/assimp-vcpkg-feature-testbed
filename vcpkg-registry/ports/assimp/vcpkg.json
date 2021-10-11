@@ -1,7 +1,7 @@
 {
   "name": "assimp",
   "version-string": "5.0.1",
-  "port-version": 6,
+  "port-version": 5,
   "description": "The Open Asset import library",
   "homepage": "https://github.com/assimp/assimp",
   "dependencies": [
@@ -12,9 +12,17 @@
   "default-features": [],
   "features":
   {
+    "3d-importer": {
+      "description": "",
+      "dependencies": []
+    },
     "3ds-importer": {
       "description": "",
       "dependencies": []
+    },
+    "3mf-importer": {
+      "description": "",
+      "dependencies": [ "pugixml" ]
     },
     "ac-importer": {
       "description": "",
@@ -48,6 +56,10 @@
       "description": "",
       "dependencies": []
     },
+    "cob-importer": {
+      "description": "",
+      "dependencies": []
+    },
     "collada-importer": {
       "description": "",
       "dependencies": [
@@ -62,8 +74,12 @@
       "description": "",
       "dependencies": []
     },
+    "fbx-importer": {
+      "description": "",
+      "dependencies": []
+    },
     "hmp-importer": {
-      "description": "todo (lassi) this does not work yet",
+      "description": "todo this does not work yet",
       "dependencies": []
     },
     "irrmesh-importer": {
@@ -79,7 +95,7 @@
       "dependencies": []
     },
     "lws-importer": {
-      "description": "todo (lassi) this does not work yet",
+      "description": "todo this does not work yet",
       "dependencies": []
     },
     "m3d-importer": {
@@ -103,7 +119,7 @@
       "dependencies": []
     },
     "mdl-importer": {
-      "description": "todo (lassi) this port does not work without md2",
+      "description": "todo this port does not work without md2",
       "dependencies": []
     },
     "nff-importer": {
@@ -126,16 +142,133 @@
       "description": "",
       "dependencies": ["pugixml"]
     },
-    "all-other": {
-      "description": "this-is-temp",
-      "dependencies": [
-        "pugixml",
-        "kubazip",
-        "poly2tri",
-        "polyclipping",
-        "rapidjson",
-        "utfcpp"
-      ]
+    "opengex-importer": {
+      "description": "",
+      "dependencies": [ "openddl-parser" ]
+    },
+    "ply-importer": {
+      "description": "",
+      "dependencies": [ "openddl-parser" ]
+    },
+    "raw-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "sib-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "smd-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "stl-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "ms3d-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "ifc-importer": {
+      "description": "",
+      "dependencies": ["poly2tri"]
+    },
+    "xgl-importer": {
+      "description": "",
+      "dependencies": [ "pugixml" ]
+    },
+    "q3d-importer": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "terragen-importer": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "q3bsp-importer": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "x-importer": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "x3d-importer": {
+      "description": "",
+      "dependencies": [ "pugixml" ]
+    },
+    "gltf-importer": {
+      "description": "",
+      "dependencies": [ "rapidjson" ]
+    },
+    "mmd-importer": {
+      "description": "",
+      "dependencies": [ "utfcpp" ]
+    },
+    "obj-exporter": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "gltf-exporter": {
+      "description": "todo this one does not work without gltf importer",
+      "dependencies": [ "rapidjson" ]
+    },
+    "opengex-exporter": {
+      "description": "",
+      "dependencies": [ "openddl-parser" ]
+    },
+    "ply-exporter": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "assbin-exporter": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "assxml-exporter": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "m3d-exporter": {
+      "description": "todo this one does not work without m3d importer",
+      "dependencies": [ ]
+    },
+    "collada-exporter": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "fbx-exporter": {
+      "description": "todo this one does not work without fbx importer",
+      "dependencies": [ ]
+    },
+    "stl-exporter": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "x-exporter": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "x3d-exporter": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "3mf-exporter": {
+      "description": "",
+      "dependencies": [ "kubazip" ]
+    },
+    "pbrt-exporter": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "assjson-exporter": {
+      "description": "",
+      "dependencies": [ ]
+    },
+    "step-exporter": {
+      "description": "",
+      "dependencies": [ ]
     }
   }
 }
