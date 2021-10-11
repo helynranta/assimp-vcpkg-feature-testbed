@@ -1,0 +1,141 @@
+{
+  "name": "assimp",
+  "version-string": "5.0.1",
+  "port-version": 6,
+  "description": "The Open Asset import library",
+  "homepage": "https://github.com/assimp/assimp",
+  "dependencies": [
+    "minizip",
+    "stb",
+    "zlib"
+  ],
+  "default-features": [],
+  "features":
+  {
+    "3ds-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "ac-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "amf-importer": {
+      "description": "",
+      "dependencies": [
+        "pugixml"
+      ]
+    },
+    "ase-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "assbin-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "b3d-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "blend-importer": {
+      "description": "Blender file format importer",
+      "dependencies": [
+        "poly2tri"
+      ]
+    },
+    "bvh-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "collada-importer": {
+      "description": "",
+      "dependencies": [
+        "pugixml"
+      ]
+    },
+    "csm-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "dxf-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "hmp-importer": {
+      "description": "todo (lassi) this does not work yet",
+      "dependencies": []
+    },
+    "irrmesh-importer": {
+      "description": "",
+      "dependencies": ["irrlicht", "pugixml"]
+    },
+    "irr-importer": {
+      "description": "",
+      "dependencies": ["pugixml"]
+    },
+    "lwo-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "lws-importer": {
+      "description": "todo (lassi) this does not work yet",
+      "dependencies": []
+    },
+    "m3d-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "md2-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "md3-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "md5-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "mdc-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "mdl-importer": {
+      "description": "todo (lassi) this port does not work without md2",
+      "dependencies": []
+    },
+    "nff-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "ndo-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "obj-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "off-importer": {
+      "description": "",
+      "dependencies": []
+    },
+    "ogre-importer": {
+      "description": "",
+      "dependencies": ["pugixml"]
+    },
+    "all-other": {
+      "description": "this-is-temp",
+      "dependencies": [
+        "pugixml",
+        "kubazip",
+        "poly2tri",
+        "polyclipping",
+        "rapidjson",
+        "utfcpp"
+      ]
+    }
+  }
+}

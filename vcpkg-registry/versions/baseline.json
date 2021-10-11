@@ -1,0 +1,8 @@
+{
+  "default":
+  {
+    "assimp": { "baseline": "5.0.1", "port-version": 6 },
+    "open3dgc": { "baseline": "2013-08-07", "port-version": 0 },
+    "openddl-parser": { "baseline": "2021-10-06", "port-version": 0 }
+  }
+}

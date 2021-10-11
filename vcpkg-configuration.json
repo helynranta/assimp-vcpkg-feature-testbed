@@ -7,9 +7,14 @@
   },
   "registries": [
     {
+      "kind": "filesystem",
+      "path": "vcpkg-registry",
+      "packages": [ "assimp", "open3dgc", "openddl-parser" ]
+    },
+    {
       "kind": "git",
       "repository": "https://github.com/lerppana/vcpkg",
-      "packages": [ "assimp" ],
+      "packages": [ ],
       "baseline": "973a7d517c09c8cfb7e6a548fcc260ca34ba7b60"
     }
   ]

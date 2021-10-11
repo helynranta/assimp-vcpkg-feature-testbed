@@ -1,0 +1,9 @@
+{
+  "versions": [
+    {
+      "version-string": "5.0.1",
+      "port-version": 6,
+      "path": "$/ports/assimp/"
+    }
+  ]
+}
