@@ -6,22 +6,14 @@ on:
 
 jobs:
   build:
-    name: ${{ matrix.os }}-build
-    runs-on: ${{ matrix.os }}
-
     strategy:
       fail-fast: false
       matrix:
-        os: [
-            ubuntu-latest,
-            macos-latest,
-            windows-latest
-        ]
-        include:
-          - os: windows-latest
-          # includes
-          - os: ubuntu-latest
-          - os: macos-latest
+        os: [ ubuntu-latest, macos-latest, windows-latest ],
+        feature: [ blend-importer ]
+
+    name: ${{ matrix.os }}-build
+    runs-on: ${{ matrix.os }}
 
     env:
       VCPKG_FEATURE_FLAGS: manifests,versions,registries
@@ -47,6 +39,11 @@ jobs:
       - run: ${{ github.workspace }}/vcpkg/bootstrap-vcpkg.bat
         if: matrix.os == 'windows-latest'
         name: bootstrap vcpkg batch script
+
+      - run: |
+          sed -i 's/"features": [],/"features": [${{ matrix.feature }}]/' vcpkg.json
+        shell: bash
+        name: insert feature to be used
 
       - run: cmake ${{ github.workspace }} -G Ninja -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
         name: cmake configure
