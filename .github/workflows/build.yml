@@ -7,10 +7,10 @@ on:
 jobs:
   build:
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
-        os: [ ubuntu-latest, macos-latest, windows-latest ],
-        feature: [ blend-importer ]
+        os: [ubuntu-latest,macos-latest,windows-latest]
+        feature: [blend-importer,fbx-importer,fbx-exporter]
 
     name: ${{ matrix.os }}-build
     runs-on: ${{ matrix.os }}
