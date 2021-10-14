@@ -22,6 +22,18 @@ jobs:
       - uses: actions/checkout@v2
         name: checkout repository
 
+      - run: |
+          sed -i '' 's/"features": \[\],/"features": \["${{ matrix.feature }}"\]/' ${{ github.workspace }}/vcpkg.json
+        shell: bash
+        name: insert feature to be used
+        if: matrix.os == 'macos-latest'
+
+      - run: |
+          sed -i 's/"features": \[\],/"features": \["${{ matrix.feature }}"\]/' vcpkg.json
+        shell: bash
+        name: insert feature to be used
+        if: matrix.os != 'macos-latest'
+
       - name: install vcpkg
         uses: lukka/run-vcpkg@v7
         with:
@@ -38,11 +50,6 @@ jobs:
       - run: ${{ github.workspace }}/vcpkg/bootstrap-vcpkg.bat
         if: matrix.os == 'windows-latest'
         name: bootstrap vcpkg batch script
-
-      - run: |
-          sed -i 's/"features": [],/"features": [${{ matrix.feature }}]/' vcpkg.json
-        shell: bash
-        name: insert feature to be used
 
       - run: cmake ${{ github.workspace }} -G Ninja -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
         name: cmake configure
