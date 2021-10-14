@@ -20,6 +20,8 @@ jobs:
       VCPKG_ROOT: ${{ github.workspace }}/vcpkg
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: recursive
         name: checkout repository
 
       - run: |
