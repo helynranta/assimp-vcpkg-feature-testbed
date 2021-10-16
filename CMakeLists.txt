@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 
 project(assimp-vcpkg-feature-testbed C CXX)
 
-find_package(assimp REQUIRED)
+find_package(assimp CONFIG REQUIRED)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
