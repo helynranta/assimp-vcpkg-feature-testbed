@@ -1,9 +1,9 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO lerppana/assimp
-    REF 44de3bd46ed4644638d842a4202bea6bd30dc3d0 # v5.0.1
+    REPO kimkulling/assimp
+    REF 5.1.5
     SHA512 25b1271f102ecd418e6ddcaf5b2b31149a7393b951dcf68cc0eadd5e18a7e0d77ac5ce65bdf4fce4fc9d448d76a241b4910450fcae63d299578844053f37ff1a
-    HEAD_REF update-cmake
+    HEAD_REF master
 )
 
 string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "dynamic" ASSIMP_BUILD_SHARED_LIBS)
@@ -12,7 +12,6 @@ set (ASSIMP_VCPKG_IMPOTER_EXPORTER_FEATURES "")
 foreach(feature ${FEATURES})
     string( FIND ${feature} "-importer" ASSIMP_VCPKG_FEATURE_TEST)
     if (NOT ${ASSIMP_VCPKG_FEATURE_TEST} EQUAL -1)
-        # essage("${feature} is importer")
         string(SUBSTRING ${feature} 0 ${ASSIMP_VCPKG_FEATURE_TEST} ASSIMP_VCPKG_FEATURE_TEST)
         string(TOUPPER ${ASSIMP_VCPKG_FEATURE_TEST} ASSIMP_VCPKG_FEATURE_TEST)
         set (ASSIMP_VCPKG_FEATURE_TEST ASSIMP_BUILD_${ASSIMP_VCPKG_FEATURE_TEST}_IMPORTER)
@@ -39,7 +38,6 @@ vcpkg_configure_cmake(
             -DIGNORE_GIT_HASH=ON
             -DASSIMP_BUILD_ALL_EXPORTERS_BY_DEFAULT=OFF
             -DASSIMP_BUILD_ALL_IMPORTERS_BY_DEFAULT=OFF
-            -DASSIMP_VCPKG_BUILD=ON
             ${ASSIMP_VCPKG_IMPOTER_EXPORTER_FEATURES}
 )
 
