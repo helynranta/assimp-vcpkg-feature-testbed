@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO lerppana/assimp
-    REF 07337cceaf677cf28a0b240904c70e2c802464bf
-    SHA512 992365ddcfaca71a6eab8039c82076a0a4d9c2cbf8d94abc15889a82d0da5f5658d34b0bb4c01efec8f3c4212d53dfca8ec54f180a20d80a6fe0d26f79ddcc03
+    REF c107c396eede3d4142a1eacb99deb9b66e53dc77
+    SHA512 10c932c97c21b69dc3d22f502f9519da96c4317cd1ff26bc5acbf08144e8ffa8a21c2d202715f8a1887c18d46f5864fe1a537ba2892a5e2845beb639f7731e7a
     HEAD_REF cmake-updates
 )
 
