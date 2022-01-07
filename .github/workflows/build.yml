@@ -29,7 +29,7 @@ jobs:
         ]
         # feature: [amf-importer,3ds-importer,ac-importer,ase-importer,assbin-importer,b3d-importer,bvh-importer,collada-importer,dxf-importer,csm-importer,hmp-importer,irrmesh-importer,irr-importer,lwo-importer,lws-importer,m3d-importer,md2-importer,md3-importer,md5-importer,mdc-importer,mdl-importer,nff-importer,ndo-importer,off-importer,obj-importer,ogre-importer,opengex-importer,ply-importer,ms3d-importer,cob-importer,blend-importer,ifc-importer,xgl-importer,fbx-importer,q3d-importer,q3bsp-importer,raw-importer,sib-importer,smd-importer,stl-importer,terragen-importer,3d-importer,x-importer,x3d-importer,gltf-importer,3mf-importer,mmd-importer,obj-exporter,opengex-exporter,ply-exporter,3ds-exporter,assbin-exporter,assxml-exporter,m3d-exporter,collada-exporter,stl-exporter,x-exporter,x3d-exporter,gltf-exporter,3mf-exporter,pbrt-exporter,assjson-exporter,step-exporter,fbx-exporter]
         feature: [ blender-import ]
-    name: ${{ matrix.setup.os }} test feature ${{ matrix.feature }}
+    name: ${{ matrix.setup.os }} ${{ matrix.setup.generator }} test feature ${{ matrix.feature }}
     runs-on: ${{ matrix.setup.os }}
 
     env:
